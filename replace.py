@@ -6,7 +6,6 @@ import os
 def file_switch(file_, pairs, reverse):
 	first = 1 if reverse else 0
 	second = 0 if reverse else 1
-	print(file_ , pairs, reverse ,first, second)
 	file = open(file_ , "r")
 	text = ""
 	for line in file.readlines():
@@ -16,10 +15,6 @@ def file_switch(file_, pairs, reverse):
 	file = open(file_ , "w")
 	file.write(text)
 	
-	
-		
-	
-		
 	
 def file_parse(file): 
 #key1:
@@ -66,6 +61,7 @@ def main(args):
 		if not os.path.isfile(key):
 			print(key + ": doesn't exist")
 			continue
+		print(key, Pairs_dict[key])
 		if (interactive):
 			print("Would you want to change " , key)
 			engage = raw_input("y/n ?")
